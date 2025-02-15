@@ -1,0 +1,43 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "description": "A service which manages users, ",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && npm run prettify && npm run lint && tsc",
+    "clean": "rm -rf dist",
+    "lint": "eslint src",
+    "prettify": "prettier . --write",
+    "start": "nodemon src/index.ts",
+    "start:prod": "node dist/index.js"
+  },
+  "author": "Rahul Kallur",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.3",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/lodash": "^4.17.14",
+    "@types/mongoose": "^5.11.97",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^15.14.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.10.1"
+  }
+}
